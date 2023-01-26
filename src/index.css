@@ -17,5 +17,6 @@ body {
 }
 
 body {
+  @apply text-slate-800;
   font-family: 'Raleway', sans-serif;
 }
