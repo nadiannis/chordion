@@ -5,14 +5,14 @@
       true,
       {
         "ignoreAtRules": [
-          'tailwind',
-          'apply',
-          'variants',
-          'responsive',
-          'screen',
-        ],
-      },
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
     ],
-    "block-no-empty": null,
-  },
+    "block-no-empty": null
+  }
 }
