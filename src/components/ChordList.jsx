@@ -5,7 +5,8 @@ import useChordName from '../hooks/useChordName';
 import Button from './Button';
 
 export default function ChordList() {
-  const { setSelectedChordName } = useChordName();
+  const { selectedChordName, setSelectedChordName } = useChordName();
+
   const chordNames = getAllChords().map((chord) => chord.aliases[0]);
 
   const handleButtonClick = (e) => {
@@ -14,9 +15,17 @@ export default function ChordList() {
 
   return (
     <div className="grid grid-cols-auto-fit gap-7">
-      {chordNames.map((chord, index) => (
-        <Button key={index} handleClick={handleButtonClick}>
-          {chord}
+      {chordNames.map((chordName, index) => (
+        <Button
+          key={index}
+          handleClick={handleButtonClick}
+          className={
+            chordName === selectedChordName
+              ? 'outline outline-offset-4 outline-4 outline-indigo-400'
+              : ''
+          }
+        >
+          {chordName}
         </Button>
       ))}
     </div>
