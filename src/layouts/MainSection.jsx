@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { get as getChord } from '@tonaljs/chord';
+import { transpose } from '@tonaljs/tonal';
 
 import useChordName from '../hooks/useChordName';
 import Container from '../components/Container';
@@ -33,13 +34,15 @@ export default function MainSection() {
 
   const chordIntervals = getChord(selectedChordName).intervals;
 
+  const chordNotes = chordIntervals.map((chordInterval) =>
+    transpose(`${selectedStartNote}${selectedOctave}`, chordInterval)
+  );
+
   const handleStartNoteChange = (e) => {
-    console.log(e.target.value);
     setSelectedStartNote(e.target.value);
   };
 
   const handleOctaveChange = (e) => {
-    console.log(e.target.value);
     setSelectedOctave(e.target.value);
   };
 
@@ -78,10 +81,10 @@ export default function MainSection() {
         </div>
         <div className="bg-white rounded-3xl flex justify-center items-center w-full h-64 lg:h-1/2 shadow lg:shadow-xl px-6 py-12 lg:mt-auto">
           <div className="text-center">
-            <h2 className="font-extrabold leading-tight text-4xl sm:text-5xl md:text-6xl xl:text-[5.3rem] mb-3.5">
-              C - E - G
+            <h2 className="font-extrabold leading-tight text-2xl sm:text-3xl md:text-4xl mb-4">
+              {chordNotes.join(' - ')}
             </h2>
-            <span className="font-bold text-slate-400 text-4xl xl:text-[2.6rem]">
+            <span className="font-bold text-slate-400 text-2xl sm:text-3xl md:text-4xl">
               {chordIntervals.join(' - ')}
             </span>
           </div>

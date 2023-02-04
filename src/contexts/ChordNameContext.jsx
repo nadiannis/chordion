@@ -5,7 +5,7 @@ const ChordNameContext = createContext();
 export default ChordNameContext;
 
 export const ChordNameContextProvider = ({ children }) => {
-  const [selectedChordName, setSelectedChordName] = useState('');
+  const [selectedChordName, setSelectedChordName] = useState('M');
 
   const context = {
     selectedChordName,
