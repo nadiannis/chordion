@@ -421,6 +421,15 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@tonaljs/chord-detect@^4.8.0":
+  version "4.8.0"
+  resolved "https://registry.yarnpkg.com/@tonaljs/chord-detect/-/chord-detect-4.8.0.tgz#652c0823c4e1310dc31f52c85d4cbd4acb2c6271"
+  integrity sha512-rpBHS2FKitIIodWI32LszeUfpq0of+0zqnU3CBc2/2UiYoyO9PmSs8UjzupKTIX/mHxOxq0ncDheT/ItB7QdNg==
+  dependencies:
+    "@tonaljs/chord-type" "^4.8.0"
+    "@tonaljs/core" "^4.8.0"
+    "@tonaljs/pcset" "^4.8.0"
+
 "@tonaljs/chord-type@^4.8.0":
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/@tonaljs/chord-type/-/chord-type-4.8.0.tgz#09fe806ef157aa04cd5d3b3be4ef7e9335b19b90"
@@ -429,23 +438,43 @@
     "@tonaljs/core" "^4.8.0"
     "@tonaljs/pcset" "^4.8.0"
 
+"@tonaljs/chord@^4.10.0":
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/@tonaljs/chord/-/chord-4.10.0.tgz#1b9a5f71699f411446fb41ce96b5f9d1b3736263"
+  integrity sha512-PyR17WYtgk0Yi1KRPeK5dVKoCCBf+LA23pRndN9RFWUkQR/zuRgmTyXpS7JRfzNqDu4GLGVCzS37QUdHRD5FvA==
+  dependencies:
+    "@tonaljs/chord-detect" "^4.8.0"
+    "@tonaljs/chord-type" "^4.8.0"
+    "@tonaljs/collection" "^4.8.0"
+    "@tonaljs/core" "^4.10.0"
+    "@tonaljs/pcset" "^4.8.0"
+    "@tonaljs/scale-type" "^4.8.0"
+
 "@tonaljs/collection@^4.8.0":
   version "4.8.0"
   resolved "https://registry.yarnpkg.com/@tonaljs/collection/-/collection-4.8.0.tgz#00cf7a42a6b329103fb9cf4721047bf179524ad4"
   integrity sha512-NSnqUDqnCZajYGPH4+27y6UAflX+RrAZQdP9YNBuJoTFtdSDrqV3cJoPdr2DRpGCK3Nuzw1dU8DlGsyWwNwlmg==
 
-"@tonaljs/core@^4.8.0":
+"@tonaljs/core@^4.10.0", "@tonaljs/core@^4.8.0":
   version "4.10.0"
   resolved "https://registry.yarnpkg.com/@tonaljs/core/-/core-4.10.0.tgz#d0230664461c86386c49c2a10b48b471510e337e"
   integrity sha512-+AH7NP9iiAGil+X7NlKGlQvls/KByQmxR51d5O+y6IjHltOkVUXk74oZuxW7zF0IsKchFn8Okr0sxqFmgsQmpA==
 
-"@tonaljs/pcset@^4.8.0":
+"@tonaljs/pcset@^4.8.0", "@tonaljs/pcset@^4.8.1":
   version "4.8.1"
   resolved "https://registry.yarnpkg.com/@tonaljs/pcset/-/pcset-4.8.1.tgz#f8b41a47959a0b5a8724b05f691e27b08f7cafc7"
   integrity sha512-Ir+xHQHBqhSlOEeIMsPwz6A9MRdeKYajKFFwhnGLzU42HcHfe0MKyttzVO+iSIenLtiYk5TyW9ADdo6y85sJeA==
   dependencies:
     "@tonaljs/collection" "^4.8.0"
     "@tonaljs/core" "^4.8.0"
+
+"@tonaljs/scale-type@^4.8.0":
+  version "4.8.1"
+  resolved "https://registry.yarnpkg.com/@tonaljs/scale-type/-/scale-type-4.8.1.tgz#be944ba021ab79afb001d3a71e122b77bd287a2e"
+  integrity sha512-XlSCFnEmiv7olj8mQBnQOBP9l1CtKFju3BqIILvLCacc6nrWSfSOSi8Y08FujSdvnU6i2fJmK/AYqlqFNoR1rA==
+  dependencies:
+    "@tonaljs/core" "^4.8.0"
+    "@tonaljs/pcset" "^4.8.1"
 
 "@types/json5@^0.0.29":
   version "0.0.29"
