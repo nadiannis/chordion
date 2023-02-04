@@ -1,13 +1,17 @@
 import React from 'react';
+import { ChordNameContextProvider } from './contexts/ChordNameContext';
+
 import ChordButtonsSection from './layouts/ChordButtonsSection';
 import MainSection from './layouts/MainSection';
 
 function App() {
   return (
-    <div className="block lg:flex">
-      <MainSection />
-      <ChordButtonsSection />
-    </div>
+    <ChordNameContextProvider>
+      <div className="block lg:flex">
+        <MainSection />
+        <ChordButtonsSection />
+      </div>
+    </ChordNameContextProvider>
   );
 }
 

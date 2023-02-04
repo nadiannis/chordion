@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { get as getChord } from '@tonaljs/chord';
 
+import useChordName from '../hooks/useChordName';
 import Container from '../components/Container';
 
 const startNotes = [
@@ -24,8 +26,11 @@ const startNotes = [
 const octaves = [1, 2, 3, 4, 5, 6, 7];
 
 export default function MainSection() {
+  const { selectedChordName } = useChordName();
+
   const [startNote, setStartNote] = useState(startNotes[0]);
   const [octave, setOctave] = useState(octaves[0]);
+  const chordIntervals = getChord(selectedChordName).intervals.join(' - ');
 
   const handleStartNoteChange = (e) => {
     console.log(e.target.value);
@@ -76,7 +81,7 @@ export default function MainSection() {
               C - E - G
             </h2>
             <span className="font-bold text-slate-400 text-4xl xl:text-[2.6rem]">
-              1 - 3 - 5
+              {chordIntervals}
             </span>
           </div>
         </div>
