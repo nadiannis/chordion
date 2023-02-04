@@ -1,6 +1,6 @@
 import React from 'react';
-import ChordList from '../components/ChordList';
 
+import ChordList from '../components/ChordList';
 import Container from '../components/Container';
 
 export default function ChordButtonsSection() {
