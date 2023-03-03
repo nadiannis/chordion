@@ -2,7 +2,11 @@ import React from 'react';
 
 import startNotes from '../data/startNotes';
 import octaves from '../data/octaves';
-import { getChordIntervals, getChordNotes } from '../utils/chord';
+import {
+  getChordAlias,
+  getChordIntervals,
+  getChordNotes,
+} from '../utils/chord';
 import useChordInfo from '../hooks/useChordInfo';
 import Container from '../components/Container';
 
@@ -15,6 +19,7 @@ export default function MainSection() {
     setSelectedOctave,
   } = useChordInfo();
 
+  const chordAlias = getChordAlias(selectedChordName);
   const chordIntervals = getChordIntervals(selectedChordName);
   const chordNotes = getChordNotes(
     selectedStartNote,
@@ -36,7 +41,7 @@ export default function MainSection() {
         <div className="font-semibold mb-8">
           <span className="block text-lg">Start note: {selectedStartNote}</span>
           <span className="block text-lg">Octave: {selectedOctave}</span>
-          <span className="block text-lg">Chord type: {selectedChordName}</span>
+          <span className="block text-lg">Chord type: {chordAlias}</span>
         </div>
         <div className="font-bold text-[2.6rem] text-indigo-500 mb-8 lg:flex-1 flex justify-center items-center gap-4">
           <select
