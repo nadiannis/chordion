@@ -27,6 +27,7 @@
     "@tonaljs/chord": "^4.10.0",
     "@tonaljs/chord-type": "^4.8.0",
     "@tonaljs/tonal": "^4.10.0",
+    "howler": "^2.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
