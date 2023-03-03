@@ -38,12 +38,12 @@ export default function MainSection() {
   return (
     <main className="bg-slate-100 bg-gradient-to-tl from-indigo-200 to-cyan-50 h-screen lg:flex-1 lg:sticky lg:top-0 py-7">
       <Container className="flex flex-col h-full">
-        <div className="font-semibold mb-8">
-          <span className="block text-lg">Start note: {selectedStartNote}</span>
-          <span className="block text-lg">Octave: {selectedOctave}</span>
-          <span className="block text-lg">Chord type: {chordAlias}</span>
+        <div className="font-semibold text-base sm:text-lg mb-12 sm:mb-8">
+          <span className="block">Start note: {selectedStartNote}</span>
+          <span className="block">Octave: {selectedOctave}</span>
+          <span className="block">Chord type: {chordAlias}</span>
         </div>
-        <div className="font-bold text-[2.6rem] text-indigo-500 mb-8 lg:flex-1 flex justify-center items-center gap-4">
+        <div className="font-bold text-4xl sm:text-[2.6rem] text-indigo-500 mb-8 lg:flex-1 flex justify-center items-center gap-4">
           <select
             name="start-note"
             className="px-2 rounded-lg"
@@ -69,14 +69,36 @@ export default function MainSection() {
             ))}
           </select>
         </div>
-        <div className="bg-white rounded-3xl flex justify-center items-center w-full h-64 lg:h-1/2 shadow lg:shadow-xl px-6 py-12 lg:mt-auto">
-          <div className="text-center">
-            <h2 className="font-extrabold leading-tight text-2xl sm:text-3xl md:text-4xl mb-4">
+        <div className="bg-none sm:bg-white rounded-3xl flex justify-center items-center w-full sm:h-64 lg:h-1/2 shadow-none lg:shadow-xl px-6 py-2 sm:py-12 lg:mt-auto">
+          <div className="hidden sm:block text-center">
+            <span className="block font-extrabold leading-tight text-2xl sm:text-3xl md:text-4xl mb-4">
               {chordNotes.join(' - ')}
-            </h2>
-            <span className="font-bold text-slate-400 text-2xl sm:text-3xl md:text-4xl">
+            </span>
+            <span className="block font-bold text-slate-400 text-2xl sm:text-3xl md:text-4xl">
               {chordIntervals.join(' - ')}
             </span>
+          </div>
+          <div className="flex flex-col justify-center gap-3 sm:hidden">
+            <div className="flex flex-wrap gap-3 justify-center">
+              {chordNotes.map((chordNote, index) => (
+                <span
+                  key={index}
+                  className="font-extrabold text-base bg-white rounded-full p-3"
+                >
+                  {chordNote}
+                </span>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-3 justify-center">
+              {chordIntervals.map((chordInterval, index) => (
+                <span
+                  key={index}
+                  className="font-extrabold text-base bg-slate-300 rounded-full p-3"
+                >
+                  {chordInterval}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </Container>
