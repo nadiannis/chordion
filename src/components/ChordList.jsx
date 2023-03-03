@@ -33,11 +33,11 @@ export default function ChordList() {
         <Button
           key={index}
           handleClick={handleButtonClick}
-          className={
+          className={`capitalize ${
             chordName === selectedChordName
               ? 'outline outline-offset-4 outline-4 outline-indigo-400'
               : ''
-          }
+          }`}
         >
           {chordName}
         </Button>
