@@ -1,41 +1,25 @@
-import React, { useState } from 'react';
-import { get as getChord } from '@tonaljs/chord';
-import { transpose } from '@tonaljs/tonal';
+import React from 'react';
 
-import useChordName from '../hooks/useChordName';
+import startNotes from '../data/startNotes';
+import octaves from '../data/octaves';
+import { getChordIntervals, getChordNotes } from '../utils/chord';
+import useChordInfo from '../hooks/useChordInfo';
 import Container from '../components/Container';
 
-const startNotes = [
-  'C',
-  'C#',
-  'Db',
-  'D',
-  'D#',
-  'Eb',
-  'E',
-  'F',
-  'F#',
-  'Gb',
-  'G',
-  'G#',
-  'Ab',
-  'A',
-  'A#',
-  'Bb',
-  'B',
-];
-const octaves = [1, 2, 3, 4, 5, 6, 7];
-
 export default function MainSection() {
-  const { selectedChordName } = useChordName();
+  const {
+    selectedStartNote,
+    selectedChordName,
+    selectedOctave,
+    setSelectedStartNote,
+    setSelectedOctave,
+  } = useChordInfo();
 
-  const [selectedStartNote, setSelectedStartNote] = useState(startNotes[0]);
-  const [selectedOctave, setSelectedOctave] = useState(octaves[0]);
-
-  const chordIntervals = getChord(selectedChordName).intervals;
-
-  const chordNotes = chordIntervals.map((chordInterval) =>
-    transpose(`${selectedStartNote}${selectedOctave}`, chordInterval)
+  const chordIntervals = getChordIntervals(selectedChordName);
+  const chordNotes = getChordNotes(
+    selectedStartNote,
+    selectedOctave,
+    selectedChordName
   );
 
   const handleStartNoteChange = (e) => {

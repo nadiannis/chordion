@@ -1,16 +1,31 @@
 import React from 'react';
 import { all as getAllChords } from '@tonaljs/chord-type';
 
-import useChordName from '../hooks/useChordName';
+import useChordInfo from '../hooks/useChordInfo';
+import useChordSound from '../hooks/useChordSound';
+import { getChordNotes } from '../utils/chord';
 import Button from './Button';
 
 export default function ChordList() {
-  const { selectedChordName, setSelectedChordName } = useChordName();
+  const {
+    selectedStartNote,
+    selectedOctave,
+    selectedChordName,
+    setSelectedChordName,
+  } = useChordInfo();
+  const { play } = useChordSound();
 
   const chordNames = getAllChords().map((chord) => chord.aliases[0]);
 
   const handleButtonClick = (e) => {
+    const chordNotes = getChordNotes(
+      selectedStartNote,
+      selectedOctave,
+      e.target.textContent
+    );
+
     setSelectedChordName(e.target.textContent);
+    play(chordNotes);
   };
 
   return (
