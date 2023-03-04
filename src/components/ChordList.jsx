@@ -12,7 +12,7 @@ export default function ChordList() {
     selectedChordName,
     setSelectedChordName,
   } = useChordInfo();
-  const { play } = useChordSound();
+  const { play, state } = useChordSound();
 
   const chordNames = getChordNames();
 
@@ -33,8 +33,9 @@ export default function ChordList() {
         <Button
           key={index}
           handleClick={handleButtonClick}
+          isLoading={state !== 'loaded'}
           className={`capitalize ${
-            chordName === selectedChordName
+            state === 'loaded' && chordName === selectedChordName
               ? 'outline outline-offset-4 outline-4 outline-indigo-400'
               : ''
           }`}
