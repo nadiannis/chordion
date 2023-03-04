@@ -7,7 +7,7 @@ module.exports = {
         'auto-fit': 'repeat(auto-fit, minmax(240px, 1fr))',
       },
       cursor: {
-        listen: 'url(./src/assets/speaker.svg), pointer',
+        listen: 'url(./assets/speaker.svg), pointer',
       },
     },
   },
