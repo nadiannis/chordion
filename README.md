@@ -1,42 +1,48 @@
 <div align="center">
-  <h1>vite-react-tailwindcss-starter</h1>
+  <br>
+  <h1>Chordion</h1>
+  <p>🎵 An easy reference on chord construction 🎵</p>
+  <br>
+  <p align="center">
+    <a href="https://github.com/nadiannis/chordion/issues"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat"></a>
+  </p>
+  <br>
+    
+  [**View the Website**](https://chordion.vercel.app)
 </div>
 
-## Features
+## Description
+
+**Chordion** is a handy reference on chord construction. It can be your companion in practicing, playing a musical instrument, or making music. You can see the chord formula with the notes that make up the chord. You can also listen to the sound of the chord.
+
+Choose a start note/ root note, octave, and chord type, then you can see the chord formula with the chord notes. When you select a chord type, you will also hear how the chord sounds.
+
+## Tech Stack
 
 - [Vite](https://vitejs.dev)
 - [React 18](https://reactjs.org)
 - [Tailwind CSS 3](https://tailwindcss.com)
-- [ESLint](https://eslint.org)
-- [Prettier](https://prettier.io)
-- [Husky](https://github.com/typicode/husky)
-- [lint-staged](https://github.com/okonet/lint-staged)
+- [tonal](https://github.com/tonaljs/tonal)
+- [howler.js](https://howlerjs.com)
 
-## Usage
+## Run Locally
 
 ### Getting Started
 
-Clone the repo into a new project folder, e.g. `MyApp`.
+- Make sure you have [Node.js](https://nodejs.org) and [Yarn](https://yarnpkg.com) installed on your computer.
 
-```bash
-git clone https://github.com/nadiannis/vite-react-tailwindcss-starter.git MyApp
-cd MyApp
-```
+- Clone the repo.
 
-Delete the old `.git` history, then initialize new `.git` repo.
+  ```bash
+  git clone https://github.com/nadiannis/chordion.git
+  cd chordion
+  ```
 
-```bash
-rm -rf .git
-git init
-```
+- Install the dependencies.
 
-### Setup
-
-Install the dependencies.
-
-```bash
-yarn
-```
+  ```bash
+  yarn
+  ```
 
 ### Development
 
@@ -54,6 +60,10 @@ Build the app.
 yarn build
 ```
 
+## Contributing
+
+You can contribute to this project by creating an [issue](https://github.com/nadiannis/chordion/issues) or [pull request](https://github.com/nadiannis/chordion/pulls).
+
 ## License
 
-MIT © [Annisa Nadia](https://github.com/nadiannis)
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/nadiannis/chordion/blob/main/LICENSE) file for details.
