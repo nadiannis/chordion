@@ -34,7 +34,7 @@ export default function ChordList() {
           key={index}
           handleClick={handleButtonClick}
           isLoading={state !== 'loaded'}
-          className={`capitalize ${
+          className={`capitalize hover:cursor-listen active:cursor-listen ${
             state === 'loaded' && chordName === selectedChordName
               ? 'outline outline-offset-4 outline-4 outline-indigo-400'
               : ''

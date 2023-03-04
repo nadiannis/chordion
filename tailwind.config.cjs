@@ -6,6 +6,9 @@ module.exports = {
       gridTemplateColumns: {
         'auto-fit': 'repeat(auto-fit, minmax(240px, 1fr))',
       },
+      cursor: {
+        listen: 'url(./src/assets/speaker.svg), pointer',
+      },
     },
   },
   plugins: [],
