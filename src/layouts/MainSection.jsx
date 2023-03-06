@@ -36,7 +36,7 @@ export default function MainSection() {
   };
 
   return (
-    <main className="bg-slate-100 bg-gradient-to-tl from-indigo-200 to-cyan-50 h-screen lg:flex-1 relative -z-20 lg:sticky lg:top-0 py-7 overflow-hidden">
+    <main className="bg-slate-100 bg-gradient-to-tl from-indigo-200 to-cyan-50 h-screen lg:flex-1 sticky top-0 py-7 overflow-hidden">
       <div className="absolute -top-12 -left-8 -z-10">
         <div className="w-72 h-72 rounded-full bg-gradient-to-br from-indigo-300 to-pink-200 absolute opacity-80 top-0 left-0 blur-3xl"></div>
         <div className="w-48 h-48 rounded-full bg-gradient-to-br from-cyan-300 to-pink-200 absolute opacity-80 top-24 left-52 blur-3xl"></div>
