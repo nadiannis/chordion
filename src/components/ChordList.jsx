@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import useChordInfo from '../hooks/useChordInfo';
 import useChordSound from '../hooks/useChordSound';
 import { getChordNames, getChordNotes } from '../utils/chord';
 import Button from './Button';
 
-export default function ChordList() {
+export default function ChordList({ snapTo = null }) {
   const {
     selectedStartNote,
     selectedOctave,
@@ -25,6 +26,8 @@ export default function ChordList() {
 
     setSelectedChordName(e.target.textContent);
     play(chordNotes);
+
+    snapTo && snapTo(2);
   };
 
   return (
@@ -46,3 +49,7 @@ export default function ChordList() {
     </div>
   );
 }
+
+ChordList.propTypes = {
+  snapTo: PropTypes.func,
+};
