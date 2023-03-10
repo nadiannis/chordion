@@ -7,9 +7,14 @@
 html,
 body {
   font-size: 16px;
+  padding: 0 !important;
 }
 
 @screen lg {
+  html {
+    overflow: visible !important;
+  }
+
   html,
   body {
     font-size: 18px;
