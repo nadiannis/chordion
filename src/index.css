@@ -4,26 +4,35 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply overflow-hidden;
+}
+
+body {
+  @apply text-slate-800 fixed;
+  font-family: 'Raleway', sans-serif;
+}
+
 html,
 body {
+  @apply w-full;
   font-size: 16px;
   padding: 0 !important;
 }
 
 @screen lg {
   html {
-    overflow: visible !important;
+    @apply overflow-visible !important;
+  }
+
+  body {
+    @apply static;
   }
 
   html,
   body {
     font-size: 18px;
   }
-}
-
-body {
-  @apply text-slate-800;
-  font-family: 'Raleway', sans-serif;
 }
 
 .react-modal-sheet-container {
