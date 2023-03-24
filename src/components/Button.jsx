@@ -13,7 +13,7 @@ export default function Button({
     <button
       className={
         !isLoading
-          ? `px-4 py-5 rounded-3xl font-semibold text-lg text-indigo-500 bg-indigo-100 hover:bg-indigo-200 active:bg-indigo-200 ${className}`
+          ? `px-4 py-5 rounded-3xl font-semibold text-base md:text-lg text-indigo-500 bg-indigo-100 hover:bg-indigo-200 active:bg-indigo-200 ${className}`
           : undefined
       }
       onClick={handleClick}
