@@ -1,7 +1,7 @@
 <div align="center">
   <br>
   <h1>Chordion</h1>
-  <p>🎵 An easy reference on chord construction 🎵</p>
+  <p>🎵 An easy reference for chord construction 🎵</p>
   <br>
   <p align="center">
     <a href="https://github.com/nadiannis/chordion/issues"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat"></a>
@@ -11,19 +11,66 @@
   [**View the Website**](https://chordion.vercel.app)
 </div>
 
+## Table of Contents
+
+- [Description](#description)
+- [Tech Stack](#tech-stack)
+- [Folder Structure](#folder-structure)
+- [Run Locally](#run-locally)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Description
 
-**Chordion** is a handy reference on chord construction. It can be your companion in practicing, playing a musical instrument, or making music. You can see the chord formula with the notes that make up the chord. You can also listen to the sound of the chord.
+**Chordion** is a handy reference for chord construction. It can be your companion in practicing, playing a musical instrument, or making music. You can see the chord formula with the notes that make up the chord. You can also listen to the sound of the chord.
 
 Choose a start note/ root note, octave, and chord type, then you can see the chord formula with the chord notes. When you select a chord type, you will also hear how the chord sounds.
 
+<br>
+<img src="./docs/img/ss-chordion-desktop.jpg">
+<br>
+<img src="./docs/img/ss-chordion-mobile.jpg">
+<br>
+
 ## Tech Stack
 
-- [Vite](https://vitejs.dev)
-- [React 18](https://reactjs.org)
-- [Tailwind CSS 3](https://tailwindcss.com)
-- [tonal](https://github.com/tonaljs/tonal)
-- [howler.js](https://howlerjs.com)
+- Language: [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Frontend Library: [React 18](https://react.dev)
+- State Management: [React Context-Provider Pattern](https://react.dev/learn/passing-data-deeply-with-context)
+- Frontend Build Tool: [Vite](https://vitejs.dev)
+- CSS Framework: [Tailwind CSS 3](https://tailwindcss.com)
+- Music Theory Library: [tonal](https://github.com/tonaljs/tonal)
+- Audio Library: [howler.js](https://howlerjs.com)
+- Linter: [ESLint](https://eslint.org)
+- Code Formatter: [Prettier](https://prettier.io)
+- Git Hook: [Husky](https://github.com/typicode/husky)
+
+## Folder Structure
+
+```
+.
+├── public
+├── src
+│   ├── assets
+│   ├── components
+│   ├── context
+│   ├── data
+│   ├── hooks
+|   ├── layouts
+│   ├── utils
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── ...
+├── index.html
+├── ...
+├── package.json
+├── ...
+├── README.md
+├── tailwind.config.cjs
+├── ...
+.
+```
 
 ## Run Locally
 
