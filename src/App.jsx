@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ChordInfoContextProvider } from './contexts/ChordInfoContext';
-import { ChordSoundContextProvider } from './contexts/ChordSoundContext';
+import { ChordInfoContextProvider } from './context/ChordInfoContext';
+import { ChordSoundContextProvider } from './context/ChordSoundContext';
 import ChordButtonsSection from './layouts/ChordButtonsSection';
 import MainSection from './layouts/MainSection';
 
